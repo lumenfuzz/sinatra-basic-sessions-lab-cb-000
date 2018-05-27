@@ -1,5 +1,5 @@
 require_relative 'config/environment'
-
+require 'pry'
 
 class App < Sinatra::Base
 
@@ -14,6 +14,7 @@ class App < Sinatra::Base
 
   post '/checkout' do
     @session = session
+    binding.pry
   end
 
 end
